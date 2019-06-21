@@ -7,7 +7,8 @@ import "./tags/homepage.tag";
 import "./tags/signup.tag";
 import "./tags/upload.tag";
 import route from "riot-route";
-import "./tags/homepage.tag"
+import "./tags/homepage.tag";
+import "./tags/uploadevent.tag";
 
 
 var firebaseConfig = {
@@ -123,6 +124,38 @@ route("/upload", () =>{
 })
   })
   
+
+route("/uploadevent", () =>{
+  const upload = riot.mount("div#root", "uploadevent");
+  document.getElementById("uploadeventform").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+    const title = document.getElementById("title").value
+    const description = document.getElementById("description").value
+    const eventlike= document.getElementById("eventlike").value
+    const files = []
+    document.querySelectorAll("input[type=file]").forEach(element => {
+      if (element.files[0]) {
+        files.push(element.files[0])
+      }
+    });
+
+  console.log(title);
+  console.log(files);
+console.log(description);
+console.log(eventlike);
+ const fileUrls = await mxFirebase.putFiles(files);
+ console.log(fileUrls);
+ const r = await mxFirebase.collection('products').save({
+   title,
+   fileUrls,
+   description,
+   eventlike
+   
+ });
+ console.log(r);
+})
+})
 route('/home..', async () => {
   const query = route.query();
   console.log(query);
@@ -133,6 +166,7 @@ route('/home..', async () => {
     products: products
     
   }
+  
  const homepage = riot.mount('#root','homepage', opts)
 })
 
@@ -140,9 +174,3 @@ route.start(true);
 
 
 
-// const name = "noooob";
-  // const arr = [1,2,3,4,5]
-  // const opts = {
-  //   name: name,s
-  //   arr :arr
-  // }

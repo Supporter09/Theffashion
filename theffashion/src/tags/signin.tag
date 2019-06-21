@@ -10,7 +10,7 @@
         
             </div>
             <div>
-                <label for="">Passwors</label>
+                <label for="">Passwords</label>
                 <input class="fullwidth" type="password" id="password" placeholder="password xịn @gmail.com" required>
             </div>
             

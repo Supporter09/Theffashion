@@ -16,7 +16,7 @@ h1 {
     font-family: Roboto Slab;
 font-style: normal;
 font-weight: normal;
-font-size: 64px;
+font-size: 32px;
 line-height: 84px;
     
     text-align: center;
@@ -29,7 +29,7 @@ span,h3 {
     font-family: Roboto Slab;
 font-style: normal;
 font-weight: normal;
-font-size: 32px;
+font-size: 25px;
 line-height: 42px;
 display: flex;
 align-items: center;
@@ -56,9 +56,10 @@ margin-top: 40px;
 #signupform {
     background: #FFFFFF;
 width: 400px;
+padding: 16px;
 box-sizing: border-box;
 box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-border-radius: 8px;
+border-radius: 20px;
 
 }
 #uploadform {
@@ -102,25 +103,45 @@ margin: auto;
     margin: auto;
 }
 label {
-    font-size: 16px;
-line-height: 130%;
-color: #4F4F4F;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    /* position: absolute;
+    left: 50px;
+    top: 62.77px; */
+    color: #000000;
+
+    /* font-size: 16px; */
+/* line-height: 130%; */
+/* color: #4F4F4F; */
 margin-bottom: 8px;
 display: block;
 }
 
 input {
+    background: #FEB2A8;
+border-radius: 32px;
+font-family: Roboto Slab;
+font-style: normal;
+font-weight: normal;
+/* font-size: 40px;
+line-height: 53px; */
+color: #FFFDFD;
+
+
     background: #FFFFFF;
       border: 1px solid #E0E0E0;
       box-sizing: border-box;
-      border-radius: 4px;
+      /* border-radius: 4px; */
       height: 53px;
       padding: 16px;
-      font-style: normal;
-      font-weight: 500;
+      /* font-style: normal; */
+      /* font-weight: 500; */
       font-size: 16px;
-      line-height: 130%;
-      margin-bottom: 24px;
+      /* line-height: 130%; */
+      /* margin-bottom: 24px; */
 }
 input::placeholder {
     color: #BDBDBD;

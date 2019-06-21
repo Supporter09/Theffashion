@@ -6,7 +6,7 @@
                     <form action="" id="signupform" >
                     <div>
                         <label for="">Username:</label>
-                        <input type="text"  id="username" placeholder="Username must be 6 characters or above">
+                        <input class="fullwidth"type="text"  id="username" placeholder="Username must be 6 characters or above">
                     </div>
                       <div>
                           <label for="">Email address:</label>
@@ -23,7 +23,7 @@
                       </div>
                       <div>
                           <label for="">Phone number:</label>
-                          <input type="number" id="phonenumber" placeholder="10 number, example 0912345678">
+                          <input class="fullwidth" type="number" id="phonenumber" placeholder="10 number, example 0912345678">
                       </div>
                       <p id="errormessage"></p>
                       <button class="fullwidth">Sign Up</button>
