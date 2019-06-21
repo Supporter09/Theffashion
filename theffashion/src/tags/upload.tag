@@ -49,7 +49,7 @@
                                                 <input type="file" id="photo3" class="fullwidth" > -->
                                                 
                                                 <label for="">Price(vnd)</label>
-                                                <input type="number" placeholder="Number only">
+                                                <input type="number" id="price" placeholder="Number only" required>
                                                 
                                                 <label for="">Select Category</label>
                                                 <select name="category" id="category" required>
@@ -64,10 +64,10 @@
                                                 
                                             
                                                     <label for="">What are you selling?</label>
-                                                    <input type="text" placeholder="Write something nice here" class="whatwhy fullwidth">
+                                                    <input type="text" id="whatsell" placeholder="Write something nice here" class="whatwhy fullwidth">
                                                 
                                                     <label for="">Why do you sell it?</label>
-                                                    <input type="text" placeholder="Write something nice here" class="whatwhy fullwidth">
+                                                    <input type="text" id="whysell" placeholder="Write something nice here" class="whatwhy fullwidth">
                                         <!--  </div>  -->
                                 </div>
                                 

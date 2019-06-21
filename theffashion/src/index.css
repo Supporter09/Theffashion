@@ -1,46 +1,60 @@
 html,
 body{
     font-family:lato;
+    width: 1440px;
+height: 1800px;
+background-image: url("background.jpg");
+    
 }
 .signin{
     height: 100%;
 }
-.signincotent {
+.signincontent {
     width: 400px;
 }
 h1 {
-    font-size: 32px;
-    line-height: 38px;
+    font-family: Roboto Slab;
+font-style: normal;
+font-weight: normal;
+font-size: 64px;
+line-height: 84px;
+    
     text-align: center;
     text-transform: capitalize;
-    color: #4F4F4F;
-    font-weight: 400;
+    color: #030303;
     margin: 0;
     margin-bottom: 8px;
 }
 span,h3 {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
+    font-family: Roboto Slab;
+font-style: normal;
+font-weight: normal;
+font-size: 32px;
+line-height: 42px;
+display: flex;
+align-items: center;
+color: #FFFFFF;  
     text-align: center;
-    color: #828282;
     display: block;
 }
 #signinform {
+    /* position: absolute;
+    width: 736px;
+    height: 794px;
+    left: 352px;
+    top: 333px; */
+       
+    box-sizing: border-box;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 36px;
     background: #FFFFFF;
-box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.16);
-border: 1px solid #000000;
-border-radius: 16px;
+
 padding: 40px;
 margin-top: 40px;
 }
 
 #signupform {
-    background-image: url("background.jpg");
-  
-border: 1px solid #000000;
+    background: #FFFFFF;
 width: 400px;
 box-sizing: border-box;
 box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
@@ -48,7 +62,7 @@ border-radius: 8px;
 
 }
 #uploadform {
-    background: #FFFFFF;
+   background-repeat: no-repeat;
 /* box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.16); 
  border-radius: 16px; 
 padding: 40px;
@@ -155,9 +169,10 @@ border-radius: 4px;
 #radios .radio {
     display: inline-block;
     width: 20%;
-    float:left;
+    /* float:left; */
     padding-top: 40px;
 }
+
 /* .radio{
     
     width: 20%;

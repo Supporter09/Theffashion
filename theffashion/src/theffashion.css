@@ -1,0 +1,134 @@
+#signinh1 {
+    position: absolute;
+width: 368px;
+height: 84px;
+left: 536px;
+top: 96px;
+
+    font-family: Roboto Slab;
+font-style: normal;
+font-weight: normal;
+font-size: 64px;
+line-height: 84px;
+
+color: #030303;
+}
+#signinh3 {
+    position: absolute;
+width: 565px;
+height: 37px;
+left: 462px;
+top: 196px;
+
+    font-family: Roboto Slab;
+font-style: normal;
+font-weight: normal;
+font-size: 32px;
+line-height: 42px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
+.sign-in {
+    margin: auto;
+}
+#sign-in-box {
+    position: absolute;
+width: 736px;
+height: 794px;
+left: 352px;
+top: 333px;
+    background: #FFFFFF;
+border: 1px solid #000000;
+box-sizing: border-box;
+box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+border-radius: 36px;
+}
+.sign-in-input {
+    position: absolute;
+    left: 50px;
+    top: 123.97px;
+    width: 606.92px;
+height: 91.81px;
+    display: block;
+    background: #FFFFFF;
+border: 1px solid #000000;
+font-size: 30px;
+}
+.sign-in-input-2 {
+    position: absolute;
+    left: 50px;
+    top: 382.36px;
+    width: 606.92px;
+height: 91.81px;
+    display: block;
+    background: #FFFFFF;
+border: 1px solid #000000;
+font-size: 30px;
+
+}
+.sign-in-label {
+    font-family: Roboto Slab;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 40px;
+position: absolute;
+left: 50px;
+top: 62.77px;
+color: #000000;
+
+}
+.sign-in-label-2 {
+    font-family: Roboto Slab;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 40px;
+position: absolute;
+left: 50px;
+top: 287.68px;
+color: #000000;
+
+}
+.sign-in-input::placeholder {
+    position: absolute;
+    width: 546.9px;
+height: 41.84px;
+font-family: Roboto Slab;
+font-style: normal;
+font-weight: 200;
+font-size: 25px;
+line-height: 33px;
+display: flex;
+align-items: center;
+}
+.sign-in-input-2::placeholder {
+    position: absolute;
+    width: 546.9px;
+height: 41.84px;
+font-family: Roboto Slab;
+font-style: normal;
+font-weight: 200;
+font-size: 25px;
+line-height: 33px;
+display: flex;
+align-items: center;
+}
+#btnsignin {
+    position: absolute;
+width: 344px;
+height: 98px;
+left: 196px;
+top: 590px;
+background: #FEB2A8;
+border-radius: 32px;
+font-family: Roboto Slab;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 53px;
+color: #FFFDFD;
+
+}

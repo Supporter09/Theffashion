@@ -7,16 +7,17 @@ import "./tags/homepage.tag";
 import "./tags/signup.tag";
 import "./tags/upload.tag";
 import route from "riot-route";
+import "./tags/homepage.tag"
 
 
 var firebaseConfig = {
-  apiKey: "AIzaSyAMGoT9pCjix2AEQGzIWirh6ajGvT1lCNM",
-  authDomain: "the-f-fashion.firebaseapp.com",
-  databaseURL: "https://the-f-fashion.firebaseio.com",
-  projectId: "the-f-fashion",
-  storageBucket: "the-f-fashion.appspot.com",
-  messagingSenderId: "291882028834",
-  appId: "1:291882028834:web:548de3f6dd27503a"
+  apiKey: "AIzaSyCqTGbcKde1ez2rqCCw5ZzmMqZn5hblayY",
+  authDomain: "nope11.firebaseapp.com",
+  databaseURL: "https://nope11.firebaseio.com",
+  projectId: "nope11",
+  storageBucket: "nope11.appspot.com",
+  messagingSenderId: "683310358968",
+  appId: "1:683310358968:web:fbf8d85065452703"
 };
 
 mxFirebase.init(firebaseConfig);
@@ -93,6 +94,9 @@ route("/upload", () =>{
     
     const emotion = document.querySelector('input[name=emotion]:checked').value
     const title = document.getElementById("title").value
+    const price = document.getElementById("price").value
+    const whatsell = document.getElementById("whatsell").value
+    const whysell= document.getElementById("whysell").value
     const files = []
     document.querySelectorAll("input[type=file]").forEach(element => {
       if (element.files[0]) {
@@ -110,10 +114,35 @@ route("/upload", () =>{
    emotion,
    title,
    fileUrls,
-   category
+   category,
+   price,
+   whatsell,
+   whysell
  });
  console.log(r);
 })
   })
   
+route('/home..', async () => {
+  const query = route.query();
+  console.log(query);
+  
+  const products =await mxFirebase.collection('products').getAll();
+  console.log(products)
+  const opts ={
+    products: products
+    
+  }
+ const homepage = riot.mount('#root','homepage', opts)
+})
+
 route.start(true);
+
+
+
+// const name = "noooob";
+  // const arr = [1,2,3,4,5]
+  // const opts = {
+  //   name: name,s
+  //   arr :arr
+  // }
