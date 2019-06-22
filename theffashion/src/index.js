@@ -9,6 +9,8 @@ import "./tags/signup.tag";
 import "./tags/upload.tag";
 import route from "riot-route";
 import "./tags/homepage.tag";
+import "./tags/navbar.tag";
+import "./tags/footer.tag"
 // import "./tags/uploadevent.tag";
 
 
@@ -27,7 +29,9 @@ mxFirebase.init(firebaseConfig);
 // firebase.initializeApp(firebaseConfig)
 
 route.base("/")
-
+riot.mount("*",{})
+const navbar = riot.mount("navbar",{})
+const footer = riot.mount("footer",{})
 //SIGN IN//
 route("/signin", () => {
   const signin = riot.mount("div#root", "signin");
@@ -89,9 +93,9 @@ route("/signup", () => {
   //   };
     
   
-route("/home", () =>{
-    const homepage = riot.mount("div#root", "homepage")
-})
+// route("/home", () =>{
+//     const homepage = riot.mount("div#root", "homepage")
+// })
 route("/upload", () =>{
   const upload = riot.mount("div#root", "upload");
   document.getElementById("uploadform").addEventListener("submit", async (e) => {
