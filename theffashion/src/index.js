@@ -180,13 +180,17 @@ route('/home..', async () => {
   
   const products =await mxFirebase.collection('products').getAll();
   console.log(products)
+  
+  const filter = await mxFirebase.collection("products").paginate(1,100,query,'')
+  console.log(filter)
   const opts ={
     products: products
-    
+  
   }
   
  const homepage = riot.mount('#root','homepage', opts)
 })
+
 
 route.start(true);
 

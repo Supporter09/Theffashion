@@ -47,6 +47,8 @@ const collection = (collectionName) => {
     return r.docs.length;
   };
 
+  
+
   const paginate = async (pageNumber, perPage, query, populate = '') => {
     const data = [];
     const queryValue = [];

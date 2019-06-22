@@ -1,15 +1,21 @@
 html,
 body{
-    font-family:lato;
-    width: 100%;
-/* height: 1800px; */
-background-image: url("background.jpg");
-background-repeat: no-repeat;    
+    background-image: url("./assets/background.jpg");
+    background-size: 100%;
+    height:100%;  
+    background-size: 100%;
+    background-repeat: repeat-y;
+
 }
-.flex{
+/* body{
+    background-image: url("./assets/background.png");
+    background-size: 100%;
+    height:100%;
+} */
+/* .flex{
     display: flex;
     justify-content: center;
-}
+} */
 .signin{
     height: 100%;
 }
@@ -20,7 +26,7 @@ h1 {
     font-family: Roboto Slab;
 font-style: normal;
 font-weight: normal;
-font-size: 32px;
+font-size: 64px;
 line-height: 84px;
     
     text-align: center;
@@ -33,13 +39,14 @@ span,h3 {
     font-family: Roboto Slab;
 font-style: normal;
 font-weight: normal;
-font-size: 25px;
-line-height: 42px;
+font-size: 42px;
+line-height: 55px;
+
 display: flex;
 align-items: center;
 color: #FFFFFF;  
     text-align: center;
-    display: block;
+    /* display: block; */
 }
 #signinform {
     /* position: absolute;
@@ -52,9 +59,10 @@ color: #FFFFFF;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
     border-radius: 36px;
     background: #FFFFFF;
+    margin-bottom: 40px;
+
 
 padding: 40px;
-margin-top: 40px;
 }
 
 #signupform {
@@ -197,98 +205,85 @@ border-radius: 4px;
     /* float:left; */
     padding-top: 40px;
 }
+.flex-box{
+    display:flex;
+    justify-content: space-between;
+}
+
+
+
 #header{
-    position:relative;
     background-color:#Fad9c1;
-    width:100%;
+}
+#header-2{
+    display:flex;
+    justify-content:space-between;
+    margin-left:100px;
+    margin-right:100px;
+}
+#header-2 a{
+    text-decoration: none;
+}
+#header-2 div{
+    display:flex;
+    align-items:center;
+}
+#header-2 div input{
     margin:0;
-    height:95px;
 }
-#header a,#header input{
-    float:left;
-}
-#header a{
-    display:inline-block;
-    text-decoration: none;
-    color:#FFFFFF;
-    height:40px;
-    text-align:center;
+#header-2 a{
     font-size:30px;
-    border-radius:32px;
-    width:100px;
 }
-#header a:hover{
-    display:inline-block;
-    text-decoration: none;
-    color:#F9CAA7 !important;
-    background-color:#FFFFFF;
-    height:40px;
-    text-align:center;
-    font-size:30px;
-    border-radius:32px;
-    width:100px;
-}
-#header #logo{
-    margin-left:131px;
-    border-radius:0;
-    height:95px;
-    width:221px;
-}
-#header #logo:hover{
-    background-color: #fad9c1;
-}
-#header a.active{
-    color:#fe9c8f !important;
-    text-decoration: underline;
-}
-#header .header-menu a{
+#header-2 .header-menu a{
     color:#000000;
-}
-.header-menu,.header-user,#header input{
-    margin-top:15px;
-}
-#header input{
-    margin-bottom:0!important;
-}
-.header-user a{
-    margin-left:25px;
-}
-#header input{
     height:40px;
-    width:382px;
-    margin-left:31px;
-    background-color:#fff6f6;
-    border:1px solid black;
+    text-align:center;
+    border-radius:32px;
+    width:100px;
+    text-align: center;
 }
-#header input::placeholder{
-    padding:12px 8px 94px;
-    font-size:20px;
-    color: rgba(0,0,0,0.25);
+#header-2 .header-menu a:hover{
+    background-color: #FFFFFF;
+    height:40px;
+    text-align:center;
+    border-radius:32px;
+    width:100px;
+    text-align: center;
 }
-#header #signIn{
+#header-2 input{
+    width:300px;
+}
+#header-2 .header-user .header-user-mini{
+    margin:10px;
+    padding:5px 5px;
+}
+#header-2 .header-user #sign-in{
     border:1px solid #feb2a8;
     background-color: #ffffff;
     color:#feb2a8;
     border-radius:32px;
+    margin-left:0!important;
     width:100px;
     box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    text-align:center;
 }
-#header #signIn:hover{
+#header-2 .header-user #sign-in:hover{
     border:1px solid #fad9c1;
     background-color: #000000;
     color:#ffffff;
     border-radius:32px;
     width:100px;
 }
-#header #signUp{
+#header-2 .header-user #sign-up{
     border:1px solid #FFFFFF;
     background-color: #feb2a8;
     color:#FFFFFF;
     border-radius:32px;
     width:100px;
     box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    text-align:center;
 }
-#header #signUp:hover{
+#header-2 .header-user #sign-up:hover{
     border:1px solid #FFFFFF;
     background-color: #000000;
     color:#fad9c1;
