@@ -244,8 +244,16 @@ const initImgUpload = () => {
     });
   });
 }
-
+const checkAuth = ()=>{
+  return new Promise((resolve,reject)=>{
+    firebase.auth().onAuthStateChanged((user)=> {
+      if(user){resolve(user)}
+      else{resolve(false)};
+    })
+  })
+}
 export {
+  checkAuth,
   mxFirebase,
   initModal,
   openModal,

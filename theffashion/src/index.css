@@ -128,7 +128,7 @@ font-style: normal;
 font-weight: normal;
 /* font-size: 40px;
 line-height: 53px; */
-color: #FFFDFD;
+
 
 
     background: #FFFFFF;
@@ -147,8 +147,8 @@ input::placeholder {
     color: #BDBDBD;
 }
 button {
-    background: #35CE97;
-    border: 1px solid #35CE97;
+    background: #FEB2A8;
+    border: 1px solid #FEB2A8;
     box-sizing: border-box;
     border-radius: 88px;
     height: 56px;

@@ -53,13 +53,13 @@
                                                 
                                                 <label for="">Select Category</label>
                                                 <select name="category" id="category" required>
-                                                    <option value="Accessories"></option>
-                                                    <option value="Boys Stuff">Boys Stuff</option>
-                                                    <option value="Bridal">Bridal</option>
-                                                    <option value="Girls Stuff">Girls Stuff</option>
-                                                    <option value="Jewelry">Jewelry</option>
+                                                    <option value="Casual">Casual</option>
+                                                    <option value="Work">Work</option>
+                                                    <option value="Home">Home</option>
+                                                    <option value="Others">Others</option>
+                                                    <!--  <option value="Jewelry">Jewelry</option>
                                                     <option value="Weird Stuff">Weird Stuff</option>
-                                                    <option value="Random Stuff">Random Stuff</option>
+                                                    <option value="Random Stuff">Random Stuff</option>  -->
                                                 </select>
                                                 
                                             

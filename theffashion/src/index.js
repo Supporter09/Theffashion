@@ -2,13 +2,15 @@ import {mxFirebase} from './mx'
 import './mx.css';
 import './index.css';
 import riot from "riot";
+import checkAuth from "./mx";
 import "./tags/signin.tag";
 import "./tags/homepage.tag";
 import "./tags/signup.tag";
 import "./tags/upload.tag";
 import route from "riot-route";
 import "./tags/homepage.tag";
-import "./tags/uploadevent.tag";
+// import "./tags/uploadevent.tag";
+
 
 
 var firebaseConfig = {
@@ -36,10 +38,12 @@ route("/signin", () => {
   try {
        await mxFirebase.signIn(email,password);
        // await firebase.auth().signInWithEmailAndPassword(email,password)
-      window.location.href ="/home"
+      window.location.href ="/home";
+      // const signinsuccess = document.getElementsByClassName("alert")
    }   
    catch(err){
      document.getElementById("errormessage").innerText= err.message
+     
    }
 }) ;
 
@@ -125,37 +129,47 @@ route("/upload", () =>{
   })
   
 
-route("/uploadevent", () =>{
-  const upload = riot.mount("div#root", "uploadevent");
-  document.getElementById("uploadeventform").addEventListener("submit", async (e) => {
-    e.preventDefault();
+// route("/uploadevent", () =>{
+//   const upload = riot.mount("div#root", "uploadevent");
+//   document.getElementById("uploadeventform").addEventListener("submit", async (e) => {
+//     e.preventDefault();
     
-    const title = document.getElementById("title").value
-    const description = document.getElementById("description").value
-    const eventlike= document.getElementById("eventlike").value
-    const files = []
-    document.querySelectorAll("input[type=file]").forEach(element => {
-      if (element.files[0]) {
-        files.push(element.files[0])
-      }
-    });
+//     const title = document.getElementById("title").value
+//     const description = document.getElementById("description").value
+//     const eventlike= document.getElementById("eventlike").value
+//     const files = []
+//     document.querySelectorAll("input[type=file]").forEach(element => {
+//       if (element.files[0]) {
+//         files.push(element.files[0])
+//       }
+//     });
 
-  console.log(title);
-  console.log(files);
-console.log(description);
-console.log(eventlike);
- const fileUrls = await mxFirebase.putFiles(files);
- console.log(fileUrls);
- const r = await mxFirebase.collection('products').save({
-   title,
-   fileUrls,
-   description,
-   eventlike
+//   console.log(title);
+//   console.log(files);
+// console.log(description);
+// console.log(eventlike);
+//  const fileUrls = await mxFirebase.putFiles(files);
+//  console.log(fileUrls);
+//  const r = await mxFirebase.collection('products').save({
+//    title,
+//    fileUrls,
+//    description,
+//    eventlike
    
- });
- console.log(r);
-})
-})
+//  });
+//  console.log(r);
+// })
+// })
+
+
+
+// checkAuth().then((user)=>{
+//     navbar[0].opts.email=user.email;
+//     navbar[0].update();
+//     console.log(user.email);
+// }).catch(()=>{
+//   console.log("Noob")
+// })
 route('/home..', async () => {
   const query = route.query();
   console.log(query);
