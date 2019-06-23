@@ -1,25 +1,19 @@
 <itemdetail>
     <div id="itemdetails">
         <p each='{number in opts.arr}'>{number}</p>
-        <!-- <div each='{product in opts.product}'> -->
-        <div>
+        <div id="detail-title">
             <p>{opts.product.title}</p>
         </div>
-        <div class="itemimg">
+        <div class="itemimg" id="detail-pic">
             <img src="{opts.product.fileUrls[0]}" alt>
         </div>
-
-        <!-- <p>{opts.product.age}</p>
-                <p>{opts.product.type}</p> -->
-
-        <div>
+        <div id="detail-desc" class='detail-filter'>
             <p>{opts.product.description}</p>
         </div>
-
+        <div id="detail-type" class='detail-filter'>{opts.product.type}</div>
+        <div>{opts.product.age}</div>
         <div>
             <p>{Number(opts.product.price).toLocaleString('vi')}đ</p>
         </div>
-
     </div>
-
 </itemdetail>

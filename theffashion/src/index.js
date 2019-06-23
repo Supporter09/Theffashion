@@ -117,15 +117,34 @@ route("/upload", () =>{
   
 route('/home..', async () => {
   const query = route.query();
-  const products = (await mxFirebase.collection("products").paginate(1,100,query, '')).data; // { data: [], total: 99 } 
-  console.log(query);
+  console.log(query)
+  const filter = {}
+  query.type ? filter.type = query.type : '';
+  query.age ? filter.age = query.age : '';
+  console.log(filter);
+  
+  const products = (await mxFirebase.collection("products").paginate(1,100,filter, '')).data; // { data: [], total: 99 } 
   const opts = {
+    currentType : query.type ? query.type: '',
+    currentAge : query.age ? query.age : '',
     products: products, // dua tu JS den HTML
   }
-
-  console.log(opts);
-  const homepage = riot.mount('div#root','homepage', opts) // de sau const opts
  
+  const homepage = riot.mount('div#root','homepage', opts) // de sau const opts
+
+  if(query.age){
+    document.getElementById('heading-filter-age').innerHTML = query.age
+  } else{
+    document.getElementById('heading-filter-age').innerHTML = '<a></a>'
+  }
+  if(query.type)
+    document.getElementById('heading-filter-type').innerHTML = query.type
+  else{
+    document.getElementById('heading-filter-type').innerHTML = '<a></a>'
+  }
+  if(!query.age && !query.type){
+    document.getElementById('heading-filter-age').innerHTML = 'Homepage'
+  }
   var slideIndex = 1;
   showDivs(slideIndex);
   document.getElementById('aa').addEventListener('click',()=>{

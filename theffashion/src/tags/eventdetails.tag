@@ -2,16 +2,16 @@
     <div id="eventdetails">
         <form action="" id="event-details-form">
             <div>
-                <img id="detailsimg" src="{opts.events.fileUrls[0]}" alt>
+                <img class="eventdetail-img" id="detailsimg" src="{opts.events.fileUrls[0]}" alt>
             </div>
             <form action="" id="eventform">
                 <div>
-                    <p>{opts.events.date}</p>
+                    <p>{opts.events.title}</p>
                 </div>
             </form>
 
             <div>
-                <p>{opts.events.title}</p>
+                <p>{opts.events.date}</p>
             </div>
         </form>
         <p>{opts.name}</p>

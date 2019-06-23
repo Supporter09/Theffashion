@@ -1,5 +1,5 @@
 <upload>
-        <div class=" upload"></div>
+        <div class="upload">
         <h1>Before you sell it...</h1>
         <h3>Let us ask you a few questions</h3>
         <div id="">
@@ -20,7 +20,7 @@
                                 <input type="number" id="price" placeholder="Number only" required>
 
                                 <label for="">Select Type</label>
-                                <select name="type" id="type" required>
+                                <select class="fullwidth" name="type" id="type" required>
                                         <option value="Casual">Casual</option>
                                         <option value="Work">Work</option>
                                         <option value="Home">Home</option>
@@ -28,7 +28,7 @@
 
                                 </select>
                                 <label for="">Select Age</label>
-                                <select name="age" id="age" required>
+                                <select class="fullwidth" name="age" id="age" required>
                                         <option value="&lt18 Years Old">&lt18 Years Old</option>
                                         <option value="18-30">18-30</option>
                                         <option value="30-60">30-60</option>
@@ -44,7 +44,7 @@
 
                         <!-- </form> -->
                         <div style="margin: auto">
-                                <button class="fullwidth">Sell it</button>
+                                <button class="btn-upload">Sell it</button>
                         </div>
 
                 </form>
