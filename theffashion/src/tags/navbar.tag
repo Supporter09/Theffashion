@@ -9,7 +9,7 @@
             <div class="header-menu">
                 <a href="/home">Home</a>
                 <a href="/events">Events</a>
-                <a href="/sale">Sale</a>
+                <a href="/upload">Sale</a>
             </div>
             <div class="header-input">
                 <input type="text" placeholder="Search for clothing,events,...">

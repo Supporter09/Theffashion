@@ -10,7 +10,7 @@
         </div>
 
         <!-- <p>{opts.product.age}</p>
-            <p>{opts.product.type}</p> -->
+                <p>{opts.product.type}</p> -->
 
         <div>
             <p>{opts.product.description}</p>

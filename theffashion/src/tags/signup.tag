@@ -26,7 +26,7 @@
                           <input class="fullwidth" type="number" id="phonenumber" placeholder="10 number, example 0912345678">
                       </div>
                       <p id="errormessage"></p>
-                      <button >Sign Up</button>
+                      <button class="btn-sign-up" >Sign Up</button>
                   </form>
                 </div>
                   
