@@ -11,9 +11,9 @@
                 <a href="/events">Events</a>
                 <a href="/upload">Sale</a>
             </div>
-            <div class="header-input">
+            <!--  <div class="header-input">
                 <input type="text" placeholder="Search for clothing,events,...">
-            </div>
+            </div>  -->
             <div class="header-user">
                 <a href="/signin" class="header-user-mini" id="sign-in">Sign in</a>
                 <a href="/signup" class="header-user-mini" id="sign-up">Sign up</a>

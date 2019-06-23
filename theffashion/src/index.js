@@ -112,7 +112,9 @@ route("/upload", () =>{
     type
     });
     console.log(r);
+    window.location.href ="/home"
   })
+
 })
   
 route('/home..', async () => {
@@ -143,7 +145,7 @@ route('/home..', async () => {
     document.getElementById('heading-filter-type').innerHTML = '<a></a>'
   }
   if(!query.age && !query.type){
-    document.getElementById('heading-filter-age').innerHTML = 'Homepage'
+    document.getElementById('heading-filter-age').innerHTML = 'Our Products'
   }
   var slideIndex = 1;
   showDivs(slideIndex);

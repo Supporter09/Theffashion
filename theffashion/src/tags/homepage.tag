@@ -4,18 +4,19 @@
         <div>
             <div class="slide-banner flex-box">
                 <div>
-                    <div class="btn-slide-banner">
-                        <button id='aa'>&#10094;</button>
-                        <button id='bb'>&#10095;</button>
+                    <div class="img">
+                        <img class="slides" src="./assets/slide-banner-1.jpg">
+                        <img class="slides" src="./assets/slide-banner-2.jpg">
+                        <img class="slides" src="./assets/slide-banner-3.jpg">
                     </div>
-                    <img class="slides" src="./assets/slide-banner-1.jpg">
-                    <img class="slides" src="./assets/slide-banner-2.jpg">
-                    <img class="slides" src="./assets/slide-banner-3.jpg">
+                    <div class="btn-slide-banner">
+                        <button class="btn-slide-banner-mini" id='aa'>&#10094;</button>
+                        <button class="btn-slide-banner-mini" id='bb'>&#10095;</button>
+                    </div>
+
                 </div>
             </div>
             <div class="non-slide-banner flex-box">
-                <h1 id="heading-filter-age">aaaaaa</h1>
-                <h1 id="heading-filter-type">bbbbbb</h1>
                 <div class="filter">
                     <div class="age">
                         <p><a href="home?age={opts.currentAge}&type=">All Types</a></p>
@@ -37,20 +38,29 @@
                     </div>
                 </div>
                 <div class="shop flex-box">
+                    <h2 id="heading-filter-age">aaaaaa</h2>
+                    <h2 id="heading-filter-type">bbbbbb</h2>
                     <p>{opts.name}</p>
                     <p each='{number in opts.arr}'>{number}</p>
                     <div>
                         <div class="product-div" each='{product in opts.products}'>
-                            <img src="{product.fileUrls[0]}">
-                            <h1>{product.title}</h1>
-                            <p>{Number(product.price).toLocaleString('vi')}đ</p>
-                            <a href="itemdetail?_id={product._id}" id="add-cart">Details</a>
+                            <div class="homeimg">
+                                <img src="{product.fileUrls[0]}">
+                            </div>
+                            <h1 style="text-align: center">{product.title}</h1>
+                            <div class="product-price">
+                            <p style="text-align: center">{Number(product.price).toLocaleString('vi')}đ</p>
+                            </div>
+                            <div>
+                            <a href="itemdetail?_id={product._id}" class="add-cart">Details</a>
+                            </div>
                             <!-- <form action="itemdetail?_id={product._id}">
                                 <button>Add to cart</button>
                             </form> -->
                         </div>
                     </div>
                 </div>
+                <div></div>
             </div>
         </div>
     </div>
