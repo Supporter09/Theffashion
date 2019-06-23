@@ -45,14 +45,15 @@ checkAuth().then((user)=>{
 //SIGN IN//
 route("/signin", () => {
   const signin = riot.mount("div#root", "signin");
-  document.getElementById("signinform").addEventListener("submit", async (e)=>{
+  document.getElementById("sign-in-form").addEventListener("submit", async (e)=>{
     e.preventDefault();
     const email= document.getElementById("email").value
     const password = document.getElementById("password").value
   try {
        await mxFirebase.signIn(email,password);
-       // await firebase.auth().signInWithEmailAndPassword(email,password)
+       // await firebase.auth().signInWithEmailAndPassword(email,password)  
       window.location.href ="/home"
+      
    }   
    catch(err){
      document.getElementById("errormessage").innerText= err.message
